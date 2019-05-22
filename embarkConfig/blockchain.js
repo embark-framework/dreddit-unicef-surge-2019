@@ -18,7 +18,7 @@ module.exports = {
       {
         nodeAccounts: true, // Accounts use for the node
         numAddresses: "1", // Number of addresses/accounts (defaults to 1)
-        password: "config/development/devpassword" // Password file for the accounts
+        password: "embarkConfig/development/devpassword" // Password file for the accounts
       },
       // Below are additional accounts that will count as `nodeAccounts` in the `deployment` section of your contract config
       // Those will not be unlocked in the node itself
@@ -76,14 +76,14 @@ module.exports = {
     // When enabled, geth uses POW to mine transactions as it would normally, instead of using POA as it does in --dev mode.
     // On the first `embark blockchain or embark run` after this option is enabled, geth will create a new chain with a 
     // genesis block, which can be configured using the `genesisBlock` configuration option below.
-    genesisBlock: "config/privatenet/genesis.json", // Genesis block to initiate on first creation of a development node
+    genesisBlock: "embarkConfig/privatenet/genesis.json", // Genesis block to initiate on first creation of a development node
     nodiscover: true,
     maxpeers: 0,
     proxy: true,
     accounts: [
       {
         nodeAccounts: true,
-        password: "config/privatenet/password" // Password to unlock the account
+        password: "embarkConfig/privatenet/password" // Password to unlock the account
       }
     ],
     targetGasLimit: 8000000,
@@ -95,7 +95,7 @@ module.exports = {
     networkType: "custom",
     networkId: 1337,
     isDev: false,
-    genesisBlock: "config/privatenet/genesis-parity.json", // Genesis block to initiate on first creation of a development node
+    genesisBlock: "embarkConfig/privatenet/genesis-parity.json", // Genesis block to initiate on first creation of a development node
     datadir: ".embark/privatenet/datadir",
     mineWhenNeeded: false,
     nodiscover: true,
@@ -104,7 +104,7 @@ module.exports = {
     accounts: [
       {
         nodeAccounts: true,
-        password: "config/privatenet/password"
+        password: "embarkConfig/privatenet/password"
       }
     ],
     targetGasLimit: 8000000,
@@ -119,7 +119,7 @@ module.exports = {
     accounts: [
       {
         nodeAccounts: true,
-        password: "config/testnet/password"
+        password: "embarkConfig/testnet/password"
       }
     ]
   },
@@ -134,7 +134,7 @@ module.exports = {
     accounts: [
       {
         nodeAccounts: true,
-        password: "config/livenet/password"
+        password: "embarkConfig/livenet/password"
       }
     ]
   }
